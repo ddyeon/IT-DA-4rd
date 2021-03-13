@@ -113,7 +113,7 @@
 
 ## 📨 깃허브 커밋 메시지 
 
-- [💡Commit convention](files/markdown/commitMessage.md)을 참고해서 커밋 메시지를 작성해주세요!
+- [💡Commit convention](./commitMessage.md)을 참고해서 커밋 메시지를 작성해주세요!
 
 
 ---
