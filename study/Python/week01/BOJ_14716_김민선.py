@@ -11,10 +11,9 @@ def bfs(start):
         for i in range(8) :
             nx = x + dx[i]
             ny = y + dy[i]
-            if 0 <= nx < M and 0 <= ny < N and visited[nx][ny] == 0 :
+            if 0 <= nx < M and 0 <= ny < N and visited[nx][ny] == 0 and word[nx][ny] == 1 :
                 visited[nx][ny] = 1
-                if word[nx][ny] == 1 :
-                    q.append([nx, ny])
+                q.append([nx, ny])
 
 M, N = map(int, sys.stdin.readline().split())
 word = [list(map(int, sys.stdin.readline().split())) for i in range(M)]
