@@ -1,7 +1,6 @@
 import sys
 from collections import deque
 
-
 n,t,g= map(int, input().split())
 visited=[False]*100001
 
