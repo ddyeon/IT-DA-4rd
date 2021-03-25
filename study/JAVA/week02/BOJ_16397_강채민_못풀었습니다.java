@@ -61,7 +61,7 @@ public class 16397_탈출 {
 		}
 		
 		System.out.println("ANG");
-
+ 
 	}
 
 }
