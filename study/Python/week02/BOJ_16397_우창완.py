@@ -10,7 +10,6 @@ def bfs(n):
     queue.append((n,0))
     while queue:
         x, cnt= queue.popleft()
-        #print(x,cnt)
         if x==g:
             print(cnt)
             return
@@ -18,12 +17,11 @@ def bfs(n):
             continue
         nx= 2*x
         #탈출할 수 없을 경우
-        if nx<=100000:
+        if nx<100000:
             for i in (10000,1000,100,10,1):
                 if nx//i!=0:
                     nx-=i
                     break
-           # print(nx)
             if not visited[nx]:
                 visited[nx]=True
                 queue.append((nx,cnt+1))
