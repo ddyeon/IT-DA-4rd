@@ -1,16 +1,15 @@
 #우울한 방학
 import sys
 
-N, M = map(int, sys.stdin.readline().split())
-vac = list(map(int, sys.stdin.readline().split()))
-apts = list()
-
 def calc(num) :
     res = 0
     for i in range(num+1) :
         res += num * 2
-        
     return res
+
+N, M = map(int, sys.stdin.readline().split())
+vac = list(map(int, sys.stdin.readline().split()))
+apts = list()
 
 for i in range(N) :
     for j in range(vac[i], -1, -1) :
