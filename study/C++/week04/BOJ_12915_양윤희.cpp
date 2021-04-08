@@ -2,8 +2,8 @@
 #include <queue>
 #include <vector>
 using namespace std;
-//´ëÈ¸ ¹®Á¦ 3
-//E ½¬¿î EM ½¬¿îÁß°£ MH Áß°£¾î·Á¿ò, H ¾î·Á¿î
+//ëŒ€íšŒ ë¬¸ì œ 3
+//E ì‰¬ìš´ EM ì‰¬ìš´ì¤‘ê°„ MH ì¤‘ê°„ì–´ë ¤ì›€, H ì–´ë ¤ìš´
 int E, EM, M, MH, H, cnt;
 int main(void) {
 	cin >> E >> EM >> M >> MH >> H;
@@ -26,7 +26,6 @@ int main(void) {
 		if (H == -1 || MH == -1)break;
 		if ((M == -1 || EM == -1) || (M == -1 || MH == -1))break;
 		cnt++;
-		cout << E << " " << EM << " " << M << " " << MH << " " << H << endl;
 	}
 	cout << cnt;
 }
