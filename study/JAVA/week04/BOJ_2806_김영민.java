@@ -11,11 +11,10 @@ public class BOJ_2806 {
 
 		int answer = 0;
 		for (int i = 1; i < N; i++) {
-			char now = dna[i];
 			if (dna[i - 1] != dna[i] && dna[i] != dna[i + 1]) {
-				if (now == 'A') {
+				if (dna[i] == 'A') {
 					dna[i] = 'B';
-				} else if (now == 'B') {
+				} else if (dna[i] == 'B') {
 					dna[i] = 'A';
 				}
 				answer++;
