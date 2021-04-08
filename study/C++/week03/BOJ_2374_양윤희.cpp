@@ -2,30 +2,30 @@
 #include <queue>
 #include <vector>
 using namespace std;
-int n;
-long long int sum;
-long long int arr[1000001];
 vector<long long int> v;
+int n;
+long long int k, sum;
 int main(void) {
 	cin >> n;
-	for(int i=0; i<n; i++){
-		cin >> arr[i];
-		if (v.empty())v.push_back(arr[i]);
+	for (int i = 0; i < n; i++) {
+		cin >> k;
+		if (v.empty())v.push_back(k);
 		else {
-			while (v.back() < arr[i]) {
-				int tmp = v.back();
+			if (k > v.back()) {
+				sum += abs(v.back() - k);
 				v.pop_back();
-				if (v.empty() || v.front() > arr[i]) {
-					sum += arr[i] - tmp;
-					break;
+				while (!v.empty()) {
+					if (v.back() > k)break;
+					v.pop_back();
 				}
-				else {
-					sum += v.back() - tmp;
-				}
+				v.push_back(k);
 			}
-			v.push_back(arr[i]);
+			else if (k < v.back()) {
+				v.push_back(k);
+			}
+			else if (k == v.back())continue;
 		}
 	}
-	if (v.size() > 1)sum += v.front() - v.back();
+	if (!v.empty())sum += v.front() - v.back();
 	cout << sum;
 }
