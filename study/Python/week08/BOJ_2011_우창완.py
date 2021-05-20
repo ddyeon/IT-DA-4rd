@@ -6,9 +6,10 @@ s=str(input())
 if s[0]=="0":
     print(0)
 else:
-    dp=[0]*5001
+    s='0'+s
+    dp=[0]*(len(s)+1)
     dp[0]=dp[1]=1
-    for i in range(1,len(s)):
+    for i in range(2,len(s)):
         if int(s[i])>0: dp[i]+=dp[i-1]
         if int(s[i-1:i+1])>=10 and int(s[i-1:i+1])<=26:
             dp[i]+=dp[i-2]
