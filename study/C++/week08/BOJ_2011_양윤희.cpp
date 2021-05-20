@@ -7,8 +7,8 @@ using namespace std;
 string s;
 long long l;
 long long dp[5001];
-//dp[n] = dp[n] + dp[n-1] =>ÇÑÀÚ¸® ¼ýÀÚ
-//dp[n] = dp[n] + dp[n-2] => µÎÀÚ¸® ¼ýÀÚ
+//dp[n] = dp[n] + dp[n-1] =>Ã‡Ã‘Ã€ÃšÂ¸Â® Â¼Ã½Ã€Ãš
+//dp[n] = dp[n] + dp[n-2] => ÂµÃŽÃ€ÃšÂ¸Â® Â¼Ã½Ã€Ãš
 long long solve() {
 	for (int i = 1; i <= s.length(); i++) {
 		if (i == 0)continue;
@@ -27,6 +27,5 @@ long long solve() {
 int main(void){
 	cin >> s;
 	dp[0] = 1;
-	dp[1] = 1;
 	cout << solve() % 1000000;
 }
