@@ -8,7 +8,6 @@ using namespace std;
 /*시그널은 0:.,1:#, 시그널의 길이는 항상 5의 배수
 # 검은색 , . 흰색
 */
-//수정필요
 char arr[20001][6];
 
 int n;
@@ -68,15 +67,7 @@ int main()
         }
 
     }
-    for (int i = 1; i < 6; i++)
-    {
-        for (int j = 1; j <= k; j++)
-        {
-            cout << arr[i][j];
-        }
-        cout << endl;
-    }
-
+   
     for(int i = 1; i <= k; i++)
     {
         if(arr[1][i] == '#')
@@ -96,7 +87,7 @@ int main()
             }
         }
         //1이나 4인경우
-        cout << "i is" << i << endl;
+       
         if(arr[4][i] == '#') //1은 가운데가 #
             answer += '1';
         else
@@ -112,4 +103,4 @@ int main()
     cout << answer << endl;
 
 
-}ㅈ
+}
