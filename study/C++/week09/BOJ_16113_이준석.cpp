@@ -37,7 +37,7 @@ int main() {
 				for (int l = j; l <= j + 2; l++) {
 					if (l >= N / 5)
 						tmp = tmp + ".";
-					else
+					elsea
 						tmp = tmp + arr[i][l];
 				}
 			}
